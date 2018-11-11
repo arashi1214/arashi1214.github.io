@@ -1,0 +1,82 @@
+<div class="vertical-menu">		創建一個物件vertical-menu
+  <a href="輸入網址">菜單名</a>		
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  <a href="#">Link 4</a>
+</div>
+
+
+
+<a> href用來指定超連結的URL
+若選擇<a>標籤的內容，則開啟href指定之URL
+<a>標籤內限放href屬性或是name屬性
+
+
+
+.vertical-menu {   /* 右側菜單*/
+    width: 180px; 
+    margin-top:150px;/*頂端高度 */
+}
+
+.vertical-menu a {
+    background-color: #eee; /* 格子為灰色 */
+    color: black; 
+    display: block; 
+    padding: 12px; 
+    text-decoration: none; /* 不顯示超連結的底線 */
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+    background-color: #4CAF50; /* Add a green color to the "active/current" link */
+    color: white;
+}
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+//第一個""是簡單描述，第二個是關鍵字
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}			//留空
+</style>
+
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2019 15:37:25").getTime();
+//距離所訂時間點的毫秒數
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>

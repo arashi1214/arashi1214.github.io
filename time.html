@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>game ready</title>
+  <meta name="viewport" content="width=device-width, initial-scale-1">
+  <link rel="stylesheet" type="text/css" href="myStyle.css">
+  <script src="jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".quotes").hide();
+      $(".quotes:nth-child(1)").fadeIn("slow"); 
+      let current = 1;   //設定當前quote的位置
+      let max = $(".slideshowul li").length;
+
+   // your jQuery...
+
+    });
+  </script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+</style>
+
+
+</head>
+<body>
+
+  <div class="content">
+   <h1>輔仁大學校慶運動會倒數</h1>
+ <div class="slideshow-container">
+
+
+<p id="demo"></p> 
+
+<script>
+// 返回到所設定日期的毫秒數
+var countDownDate = new Date("Dec 8, 2018 08:00:00").getTime();
+
+// 每秒更新倒數(照指定的周期（以毫秒計算）重複使用此項
+var x = setInterval(function() {
+
+    // 確定今天的時間
+    var now = new Date().getTime();
+    
+    // 計算所距離多少時間
+    var distance = countDownDate - now;
+    
+    // 換算成日時分秒
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // 搜尋叫做demo的標籤並輸入到裡面(innerHTML可設定code裡面的元素
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // 如果時間到的話，輸出... 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "運動會開始!!!";
+    }
+}, 1000);
+</script>
+
+
+<p>
+  校慶運動會<br>
+  地點：輔仁大學<br>
+  時間：2018/12/8
+</p>
+
+<a href="try.html">回首頁</a>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+body{
+  background-image: url("BG_Tree.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment:fixed;
+}
+
+h1{
+	text-align: center;
+}
+.content{
+  font-family: Microsoft JhengHei, Arial, sans-serif;
+  background-color: rgba(255, 255, 255, 0.5); 
+ margin-top:60px;
+  margin-left: 80px;
+  margin-right: 80px;
+  padding: 25px;
+}
+.article{
+  margin: 0px auto;
+  text-align: center;
+}
+
+.slideshow-container{
+    width: 60%;
+    height: 100px;
+    margin: 0px auto;
+    text-align: center;
+}
+.slideshowul{
+    width: 80%;
+  list-style-type: none;
+  display: inline-block;
+  margin: 0px;
+  text-align: center;
+  padding: 0px;
+}
+
+.spot{
+    width: 13px;
+    height: 13px;
+    margin-top: 5px;
+    border-radius: 100%;
+    background-color: gray;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.spot:hover{
+  background-color: black;
+}
+
+.spot.prev{
+  float:left;
+}
+.spot.next{
+  float:right;
+}
+
+
+.vertical-menu {   /* 右側菜單*/
+    width: 180px; 
+    margin-top:150px;/*頂端高度 */
+}
+
+.vertical-menu a {
+    background-color: #eee; /* 格子為灰色 */
+    color: black; 
+    display: block; 
+    padding: 12px; 
+    text-decoration: none; /* 不顯示超連結的底線 */
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc; /* 滑鼠移過去時變成灰色 */
+}
+
+.vertical-menu a.active {
+    background-color: #4CAF50; /* Add a green color to the "active/current" link */
+    color: white;
+}
+
+
+
+@media(max-width: 800px){
+  //當小於...時，做什麼事情
+  .content{
+    margin: 20px 15px 20px 15px;
+  }
+}

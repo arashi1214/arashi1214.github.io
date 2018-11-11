@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>arashi's page</title>
+  <meta name="viewport" content="width=device-width, initial-scale-1">
+  <link rel="stylesheet" type="text/css" href="myStyle.css">
+  <script src="jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".quotes").hide();
+      $(".quotes:nth-child(1)").fadeIn("slow"); 
+      let current = 1;   //設定當前quote的位置
+      let max = $(".slideshowul li").length;
+
+      startChange();
+      //console.log(max);
+
+          function prev(){
+            $(".quotes").hide();
+            current -= 1;
+
+            if(current ==0){
+                current = max;
+            }
+            $(".quotes:nth-child(" + current + ")").fadeIn("slow");
+          }
+              function next(){
+                $(".quotes").hide();
+                current += 1;
+
+                if(current ==max){
+                    current = 1;
+                }
+                $(".quotes:nth-child(" + current + ")").fadeIn("slow");
+              }
+              function startChange(){
+                changeIt = setInterval(function(){next();}, 4000);
+              }
+              function stoptChange(){
+                clearInterval(changeIt);
+              }
+              $(".spot.prev").click(function(){
+                  stoptChange();
+                  prev();
+                  startChange();
+              });
+              $(".spot.next").click(function(){
+                  stoptChange();
+                  next();
+                  startChange();
+              });
+
+
+   // your jQuery...music
+		// under is music
+    });
+  </script>
+
+<Embed Src="https://userscontent2.emaze.com/audio/c95bbded-e2be-4ee4-b5b7-35233645331a/a41d6d32816a442a4b5c99ffc5b8162cd_emazeaudio_V.K.night.mp3" Loop="True" AutoStart="True" Hidden=True>
+
+
+</head>
+<body>
+
+  <div class="content">
+   <h1>王譽錚的個人網頁</h1>
+ <div class="slideshow-container">
+    <div class="spot prev"></div>
+    <ul class="slideshowul">
+      <li class="quotes">青春之後，後悔之前，我依然用力的活著</li>
+      <li class="quotes">我在煙霧中尋找期待，手心緊握哪怕只是一片虛幻</li>
+      <li class="quotes">期盼未來，懷念過去</li>
+      <li class="quotes">只有我的作品，希望不管是神亦或是蟲都能喜歡上</li>
+    </ul>
+    <div class="spot next"></div>
+
+
+    <div class="vertical-menu">  
+      <a href="try.html">首頁簡介</a>
+      <a href="https://www.facebook.com/%E5%A4%9C%E6%A9%99%E7%9A%84%E9%AD%94%E7%8E%8B%E5%AE%AE%E6%AE%BF-341547822935937/">友誼連接</a>
+      <a href="game-ready.html">待做遊戲</a>
+      <a href="time.html">校慶倒數</a>
+      <a href="https://photos.google.com/share/AF1QipOwni2KToFnyW3FZVF_x5lfewWjGf_sWZ6PSJTXhcs0so4dJZb93V0jKIsH7seZGQ?key=bmxOZjZ1cUwtcEhTZW9saGt1SUN2ekpCUzluN0Zn">宿營照片</a>
+      <a href="birthday.html">生日警報</a>
+      <a href="#">敬請期待</a>
+    </div>
+
+
+</div>
+  <div class = "article">
+      <h2 id="mySelfie">我的大頭貼</h2>
+      <img src="pictures/267939.jpg" style="width:300px;">
+      <h2 id="whoIsI">我是誰?</h2>
+      <p>
+      名字: 王譽錚<br>
+      系級: 圖資一<br>
+      就讀學校: <a href="http://www.fju.edu.tw/">輔仁大學</a>
+      </p>
+      <h2 id="mySkill">我的專長</h2>
+        <p>1.做點心</p>
+        <p>2.寫書法</p>
+        <p>3.閱讀</p>
+      <h2 id="myHabbit">我的興趣</h2>
+        <p>聽音樂</p>
+        <p>閱讀</p>
+        <p>彈鋼琴</p>
+    </div>
+  </div>
+
+</body>
+</html>
+

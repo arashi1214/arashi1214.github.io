@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>game ready</title>
+  <meta name="viewport" content="width=device-width, initial-scale-1">
+  <link rel="stylesheet" type="text/css" href="myStyle.css">
+  <script src="jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".quotes").hide();
+      $(".quotes:nth-child(1)").fadeIn("slow"); 
+      let current = 1;   //設定當前quote的位置
+      let max = $(".slideshowul li").length;
+
+   // your jQuery...
+
+    });
+  </script>
+
+</head>
+<body>
+
+  <div class="content">
+   <h1>待做遊戲</h1>
+ <div class="slideshow-container">
+
+</div>
+
+    <div class = "article">
+        <h2 id="rpg">rpg類</h2>
+        <p>
+        遊戲名(暫定)：無名的勇者<br>
+        使用程式：rpgmaker<br>
+        簡介：流傳下來的故事，往往都與事實不符。通常不是因為事實太過殘酷，就是單純被遺忘了。<br>
+        劇本擔當：夜橙<br>
+        附註：劇本緩慢生成中
+
+        </p>
+        <h2 id="word">文字遊戲類</h2>
+          <p>遊戲名(暫定)：四色之外<br>
+          	 使用程式(暫定)：C++<br>
+	        簡介：為純文字遊戲，有多種結局<br>
+	        劇本擔當：***<br>
+	        附註：劇本緩慢生成中
+          </p>
+        <a href="try.html">回首頁</a>
+      </div>
+  </div>
+</body>
+</html>
