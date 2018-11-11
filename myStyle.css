@@ -84,7 +84,7 @@ h1{
 
 
 @media(max-width: 800px){
-  //當小於...時，做什麼事情
+ /*當小於...時，做什麼事情*/
   .content{
     margin: 20px 15px 20px 15px;
   }
